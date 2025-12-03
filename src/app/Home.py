@@ -44,7 +44,7 @@ with col1:
     in the United States using real estate data from Realtor.com.
     
     ### 🎯 Project Goals
-    - Analyze and preprocess real estate data with 2.2M+ records
+    - Analyze and preprocess real estate data with 1.7M+ records
     - Handle missing values intelligently (MNAR, MAR, MCAR)
     - Engineer meaningful features for better predictions
     - Compare multiple ML models and select the best performer
@@ -52,7 +52,7 @@ with col1:
     
     ### 📊 Dataset Information
     - **Source:** Realtor.com
-    - **Records:** 2,226,382 listings
+    - **Records:** 1,756,382 listings
     - **Features:** 12 original features
     - **Target:** House price prediction
     """)
@@ -73,7 +73,7 @@ st.markdown("---")
 # Project Workflow
 st.header("🔄 Project Workflow")
 
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 with col1:
     st.markdown("### 1️⃣ Data Overview")
@@ -118,6 +118,15 @@ with col5:
     - Price estimation
     - Insights
     - Recommendations
+    """)
+
+with col6:
+    st.markdown("### 6️⃣ Visualizer")
+    st.markdown("""
+    - Interactive tool
+    - Check the Infrastructure 
+    - Schools, hospitals, etc
+    - Find your own city
     """)
 
 st.markdown("---")
@@ -249,12 +258,14 @@ with st.sidebar:
     3. **Preprocessing** → See transformations
     4. **Models** → Compare performance
     5. **Prediction** → Try the tool!
+    6. **Visualizer** → Find your own house!
     
     ---
     
     ### 📂 Required 
                 
-    Make sure you are in a good mood!
+    **Make sure you are in a good mood!**
+                
     ---
     
     ### 🎓 Learning Outcomes
@@ -266,10 +277,10 @@ with st.sidebar:
     ✅ ML deployment  
                 
     ### Who might be interested in the project?
-        -> house buyers
-        -> house sellers
-        -> real state agency
-        -> government organizations to define the price range in regions
+    * house buyers
+    * house sellers
+    * real state agency
+    * government organizations to define the price range in regions
     
     """)
     
