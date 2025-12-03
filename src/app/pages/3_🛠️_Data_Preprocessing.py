@@ -14,10 +14,11 @@ st.markdown("---")
 @st.cache_data
 def load_data():
     try:
-        data = pd.read_csv(r'c:\Users\Администратор\Documents\study\CSME 830\house_price_project\data\raw\sample_before_cleaning.csv')
+        # data = pd.read_csv(r'c:\Users\Администратор\Documents\study\CSME 830\house_price_project\data\raw\sample_before_cleaning.csv')
+        data = pd.read_csv(r'data/raw/sample_before_cleaning.csv')
         return data
     except:
-        st.error("⚠️ Please ensure 'main_clean.csv' is in the same directory")
+        st.error("⚠️ Please ensure 'sample_before_cleaning' is in the same directory")
         return None
 
 df = load_data()

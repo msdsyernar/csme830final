@@ -130,7 +130,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.metric(
         label="Best Model Performance",
-        value="R² = 0.88",
+        value="R² = 0.80",
         delta="CatBoost Regressor"
     )
     
@@ -144,7 +144,7 @@ with col2:
 with col3:
     st.metric(
         label="Data Processing",
-        value="222K samples",
+        value="170+ K samples",
         delta="10% stratified sample"
     )
 
@@ -200,6 +200,7 @@ Use the **sidebar** to navigate through different sections of the project:
 3. **🛠️ Data Preprocessing** - Feature engineering and cleaning
 4. **🤖 Model Selection** - Comparing ML models and results
 5. **🎯 Price Prediction** - Interactive prediction tool
+6. **📍  City Visualizer** - Interactive visualizer tool    
 
 Each page demonstrates a critical step in the data science workflow!
 """)
@@ -212,11 +213,11 @@ st.header("📈 Project Statistics")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.metric("Original Dataset", "2.2M+ rows")
+    st.metric("Original Dataset", "1.7M+ rows")
     st.caption("Full dataset size")
 
 with col2:
-    st.metric("Working Dataset", "222K rows")
+    st.metric("Working Dataset", "170K+ rows")
     st.caption("10% stratified sample")
 
 with col3:
@@ -251,14 +252,9 @@ with st.sidebar:
     
     ---
     
-    ### 📂 Required Files
-    
-    Make sure these files are in your directory:
-    - `train_set.csv`
-    - `main_clean.csv`
-    - `cleaned.csv`
-    - `catboost_model.pkl` (optional)
-    
+    ### 📂 Required 
+                
+    Make sure you are in a good mood!
     ---
     
     ### 🎓 Learning Outcomes
@@ -268,6 +264,12 @@ with st.sidebar:
     ✅ Feature engineering  
     ✅ Model comparison  
     ✅ ML deployment  
+                
+    ### Who might be interested in the project?
+        -> house buyers
+        -> house sellers
+        -> real state agency
+        -> government organizations to define the price range in regions
     
     """)
     

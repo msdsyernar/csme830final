@@ -18,7 +18,8 @@ st.markdown("---")
 @st.cache_data
 def load_data():
     try:
-        data = pd.read_csv(r'c:\Users\Администратор\Documents\study\CSME 830\house_price_project\data\processed\cleaned.csv')
+        # data = pd.read_csv(r'c:\Users\Администратор\Documents\study\CSME 830\house_price_project\data\processed\cleaned.csv')
+        data = pd.read_csv(r'data/processed/cleaned.csv')
         return data
     except:
         st.error("⚠️ Please ensure 'cleaned.csv' is in the same directory")

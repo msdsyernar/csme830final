@@ -72,10 +72,11 @@ def load_model():
 @st.cache_data
 def load_reference_data():
     try:
-        df = pd.read_csv(r'c:\Users\Администратор\Documents\study\CSME 830\house_price_project\models\re_cleaned.csv')
+        # df = pd.read_csv(r'c:\Users\Администратор\Documents\study\CSME 830\house_price_project\models\re_cleaned.csv')
+        df = pd.read_csv(r'models/re_cleaned.csv')
         return df
     except:
-        st.error("⚠️ Reference data 'cleaned.csv' not found")
+        st.error("⚠️ Reference data 're_cleaned.csv' not found")
         return None
 
 model = load_model()
