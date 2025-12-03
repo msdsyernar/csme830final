@@ -21,24 +21,25 @@ if project_root not in sys.path:
 
 # NOW you can import safely
 from src.features.custom_features import InteractionFeatures
+from src.features.custom_features import FrequencyEncoder
 
-from sklearn.base import BaseEstimator, TransformerMixin
+# from sklearn.base import BaseEstimator, TransformerMixin
 
-class FrequencyEncoder(BaseEstimator, TransformerMixin):
-    def __init__(self, columns):
-        self.columns = columns
-        self.freq_maps = {}
+# class FrequencyEncoder(BaseEstimator, TransformerMixin):
+#     def __init__(self, columns):
+#         self.columns = columns
+#         self.freq_maps = {}
 
-    def fit(self, X, y=None):
-        for col in self.columns:
-            self.freq_maps[col] = X[col].value_counts().to_dict()
-        return self
+#     def fit(self, X, y=None):
+#         for col in self.columns:
+#             self.freq_maps[col] = X[col].value_counts().to_dict()
+#         return self
 
-    def transform(self, X):
-        X = X.copy()
-        for col in self.columns:
-            X[col + "_freq"] = X[col].map(self.freq_maps[col]).fillna(0)
-        return X
+#     def transform(self, X):
+#         X = X.copy()
+#         for col in self.columns:
+#             X[col + "_freq"] = X[col].map(self.freq_maps[col]).fillna(0)
+#         return X
 
 
 st.set_page_config(page_title="Price Prediction", page_icon="🎯", layout="wide")

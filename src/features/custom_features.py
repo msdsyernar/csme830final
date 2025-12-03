@@ -11,3 +11,19 @@ class InteractionFeatures(BaseEstimator, TransformerMixin):
         X["bath_per_bed"] = X["bath"] / (X["bed"] + 1)
         X["size_bath_interaction"] = X["house_size"] * X["bath"]
         return X
+
+class FrequencyEncoder(BaseEstimator, TransformerMixin):
+    def __init__(self, columns):
+        self.columns = columns
+        self.freq_maps = {}
+
+    def fit(self, X, y=None):
+        for col in self.columns:
+            self.freq_maps[col] = X[col].value_counts().to_dict()
+        return self
+
+    def transform(self, X):
+        X = X.copy()
+        for col in self.columns:
+            X[col + "_freq"] = X[col].map(self.freq_maps[col]).fillna(0)
+        return X
