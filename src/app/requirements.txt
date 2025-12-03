@@ -9,3 +9,4 @@ statsmodels
 osmnx
 folium
 streamlit_folium
+catboost
