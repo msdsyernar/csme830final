@@ -38,7 +38,8 @@ st.markdown("---")
 @st.cache_data
 def load_data():
     try:
-        data = pd.read_csv(r'c:\Users\Администратор\Documents\study\CSME 830\house_price_project\data\raw\raw_data.csv')
+        # data = pd.read_csv(r'c:\Users\Администратор\Documents\study\CSME 830\house_price_project\data\raw\raw_data.csv')
+        data = pd.read_csv(r'data\raw\raw_data.csv')
         return data
     except:
         st.error("⚠️ Please ensure 'train_set.csv' is in the same directory")
