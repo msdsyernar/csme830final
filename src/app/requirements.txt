@@ -10,3 +10,4 @@ osmnx
 folium
 streamlit_folium
 catboost
+category_encoders

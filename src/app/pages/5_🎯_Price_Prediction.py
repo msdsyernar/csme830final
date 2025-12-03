@@ -8,7 +8,7 @@ import sys
 import os
 # --- PATH FIX START ---
 # This must happen BEFORE you try to import 'src'
-# 1. Get the directory of the current file (src/app/pages)
+# 1. Get the directory of the current file (src/app/pages) 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # 2. Go up 3 levels to reach the project root (csme830final)
