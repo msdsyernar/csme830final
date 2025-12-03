@@ -54,7 +54,8 @@ def load_model():
 
     # 3. Construct the full path to the file
     # Change 'models_folder' to the actual name of your folder 
-    model_path = r'C:\Users\Администратор\Documents\study\CSME 830\house_price_project\notebooks\catboost_full_pipeline.pkl'
+    # model_path = r'C:\Users\Администратор\Documents\study\CSME 830\house_price_project\notebooks\catboost_full_pipeline.pkl'
+    model_path = r'notebooks/catboost_full_pipeline.pkl'
 
     try:
         # 4. Load using the full path
