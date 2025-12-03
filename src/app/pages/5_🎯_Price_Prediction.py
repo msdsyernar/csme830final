@@ -2,13 +2,27 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-import os
 from catboost import CatBoostRegressor
 import plotly.graph_objects as go
 import sys
 import os
-from src.features.custom_features import InteractionFeatures, FrequencyEncoder
+# --- PATH FIX START ---
+# This must happen BEFORE you try to import 'src'
+# 1. Get the directory of the current file (src/app/pages)
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
+# 2. Go up 3 levels to reach the project root (csme830final)
+# pages -> app -> src -> ROOT
+project_root = os.path.abspath(os.path.join(current_dir, "../../../"))
+
+# 3. Add the project root to sys.path
+if project_root not in sys.path:
+    sys.path.append(project_root)
+# --- PATH FIX END ---
+
+# NOW you can import safely
+from src.features.custom_features import InteractionFeatures, FrequencyEncoder
+from sklearn.base import BaseEstimator, TransformerMixin
 
 st.set_page_config(page_title="Price Prediction", page_icon="🎯", layout="wide")
 
