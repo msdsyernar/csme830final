@@ -7,39 +7,7 @@ from catboost import CatBoostRegressor
 import plotly.graph_objects as go
 import sys
 import os
-
-# 1. Get the directory of the current file (src/app/pages)
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
-# 2. Go up 3 levels to reach the project root
-# pages -> app -> src -> PROJECT ROOT
-project_root = os.path.abspath(os.path.join(current_dir, "../../../"))
-
-# 3. Add the project root to sys.path so Python can find 'src'
-if project_root not in sys.path:
-    sys.path.append(project_root)
-
-# NOW you can import safely
-from src.features.custom_features import InteractionFeatures
-from src.features.custom_features import FrequencyEncoder
-
-# from sklearn.base import BaseEstimator, TransformerMixin
-
-# class FrequencyEncoder(BaseEstimator, TransformerMixin):
-#     def __init__(self, columns):
-#         self.columns = columns
-#         self.freq_maps = {}
-
-#     def fit(self, X, y=None):
-#         for col in self.columns:
-#             self.freq_maps[col] = X[col].value_counts().to_dict()
-#         return self
-
-#     def transform(self, X):
-#         X = X.copy()
-#         for col in self.columns:
-#             X[col + "_freq"] = X[col].map(self.freq_maps[col]).fillna(0)
-#         return X
+from src.features.custom_features import InteractionFeatures, FrequencyEncoder
 
 
 st.set_page_config(page_title="Price Prediction", page_icon="🎯", layout="wide")
