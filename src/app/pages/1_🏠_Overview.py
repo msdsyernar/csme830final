@@ -29,9 +29,9 @@ This dataset contains Real Estate listings in the US broken by State and zip cod
 - `house_size`: House area/size in square feet
 - `prev_sold_date`: Previously sold date
 
-**Data Source:** [Realtor.com](https://www.realtor.com/)
-**Additional Data Sources:** © OpenStreetMap contributors (https://www.openstreetmap.org/copyright)
-        **Kaggle dataset:** https://www.kaggle.com/datasets/arnavgupta1205/usa-housing-dataset
+- **Data Source:** [Realtor.com](https://www.realtor.com/)
+- **Additional Data Sources:** © OpenStreetMap contributors (https://www.openstreetmap.org/copyright)
+- **Kaggle dataset:** https://www.kaggle.com/datasets/arnavgupta1205/usa-housing-dataset
 """)
  
 st.markdown("---")

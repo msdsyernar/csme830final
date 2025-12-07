@@ -56,9 +56,9 @@ with col1:
     - **Features:** 12 original features
     - **Target:** House price prediction
                 
-        **Data Source:** [Realtor.com](https://www.realtor.com/)
-        **Additional Data Sources:** © OpenStreetMap contributors (https://www.openstreetmap.org/copyright)
-        **Kaggle dataset:** https://www.kaggle.com/datasets/arnavgupta1205/usa-housing-dataset
+        - **Data Source:** [Realtor.com](https://www.realtor.com/)
+        - **Additional Data Sources:** © OpenStreetMap contributors (https://www.openstreetmap.org/copyright)
+        - **Kaggle dataset:** https://www.kaggle.com/datasets/arnavgupta1205/usa-housing-dataset
     """)
 
 with col2:
